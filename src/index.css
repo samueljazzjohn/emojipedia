@@ -30,12 +30,6 @@ Header{
   border-radius: 5px;
 }
 
-.body{
-  width: 100%;
-  /* display: flex;
-  flex-direction: row; */
-}
-
 img{
   margin-top: 5px;
   margin-left: 40%;
