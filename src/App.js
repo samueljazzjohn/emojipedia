@@ -1,14 +1,14 @@
 import Card from "./components/Card"
 import EmojiDetails from "./Emoji";
 
-function CreateCard(emojiTerm){
-  return <Card 
-    key={emojiTerm.id}
-    name={emojiTerm.name}
-    details={emojiTerm.details}
-    emoji={emojiTerm.emoji}
-  />
-}
+// function CreateCard(emojiTerm){
+//   return <Card 
+//     key={emojiTerm.id}
+//     name={emojiTerm.name}
+//     details={emojiTerm.details}
+//     emoji={emojiTerm.emoji}
+//   />
+// }
 
 function App() {
   return (
@@ -17,7 +17,14 @@ function App() {
         <h1 align="center">Emojipedia</h1>
       </header>
       <dl>
-          {EmojiDetails.map(CreateCard)}
+        {EmojiDetails.map(emojiTerm =>
+          <Card
+            key={emojiTerm.id}
+            name={emojiTerm.name}
+            details={emojiTerm.details}
+            emoji={emojiTerm.emoji}
+          />
+        )}
       </dl>
     </div>
   );

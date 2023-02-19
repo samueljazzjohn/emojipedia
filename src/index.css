@@ -49,6 +49,7 @@ dt{
 }
 
 dl{
+  /* max-width: 35%; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
