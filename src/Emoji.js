@@ -1,7 +1,7 @@
 const EmojiDetails=[
     {
         id:1,
-        emoji:"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/grinning-face_1f600.png",
+        emoji:"https://em-content.zobj.net/thumbs/320/apple/325/grinning-face-with-smiling-eyes_1f604.png",
         name:"Grinning face",
         details:"The happy smiling face is one of the most common emojis and universally applicable: you just want to say hello, express joy or excitement about something or brighten up a short text."
     },
