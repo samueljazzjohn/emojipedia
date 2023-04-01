@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emojipedia
+  labels:
+    app: emojipedia
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: emojipedia
+  template:
+    metadata:
+      labels:
+        app: emojipedia
+    spec:
+      containers:
+        - name: emojipedia
+          image: jazzjohn/emojipedia:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: REACT_APP_API_URL
+              value: "http://127.0.0.1:3000"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: emojipedia
+spec:
+  selector:
+    app: emojipedia
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
