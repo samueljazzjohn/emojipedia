@@ -25,10 +25,11 @@ kind: Service
 metadata:
   name: reactjs-app-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: emojipedia
   ports:
     - name: http
       port: 80
       targetPort: 3000
+      nodePort: 30003
